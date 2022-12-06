@@ -1,22 +1,19 @@
 namespace AdventOfCode;
 
-public class Day_6
+public class Day_7_Template
 {
     public void Execute()
     {
-        string filePath = InputPathProvider.GetInputPath("day_6.txt");
+        string filePath = InputPathProvider.GetInputPath("day_7.txt");
+
         using (var reader = new StreamReader(filePath))
         {
             while (reader.Peek() >= 0)
             {
-                var line = reader.ReadLine();
-
 
             }
         }
 
-        var result = "blabla";
-
-        Console.WriteLine(result);
+        Console.WriteLine("kopytko");
     }
 }

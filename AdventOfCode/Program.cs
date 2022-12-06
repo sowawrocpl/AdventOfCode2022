@@ -2,5 +2,5 @@
 
 using AdventOfCode;
 
-var day = new Day_5_SupplyStacks();
+var day = new Day_7_Template();
 day.Execute();
