@@ -2,5 +2,5 @@
 
 using AdventOfCode;
 
-var day = new Day_7_Template();
+var day = new Day_8_TreetopTreeHouse();
 day.Execute();

@@ -1,19 +1,21 @@
 namespace AdventOfCode;
 
-public class Day_7_Template
+public class Day_8_TreetopTreeHouse
 {
     public void Execute()
     {
-        string filePath = InputPathProvider.GetInputPath("day_7.txt");
+        string filePath = InputPathProvider.GetInputPath("day_8.txt");
 
         using (var reader = new StreamReader(filePath))
         {
             while (reader.Peek() >= 0)
             {
+                string line = reader.ReadLine();
+
 
             }
         }
 
-        Console.WriteLine("kopytko");
+        //Console.WriteLine(dirToDelete.Size);
     }
 }
