@@ -73,7 +73,8 @@ public class Day_8_TreetopTreeHouse
             var left = yTrees.Where(t => t.X < theThree.X).OrderByDescending(t => t.X);
             var right = yTrees.Where(t => t.X > theThree.X).OrderBy(t => t.X);
 
-            var multipliers = new[] { bottom, top, left, right }.Select(trees => GetDistanceScenicForOneDirection(theThree, trees.ToList()));
+            var multipliers = new[] { bottom, top, left, right }
+                .Select(trees => GetDistanceScenicForOneDirection(theThree, trees.ToList()));
             int result = 1;
             foreach (var multiplier in multipliers)
             {
@@ -85,27 +86,15 @@ public class Day_8_TreetopTreeHouse
 
         int GetDistanceScenicForOneDirection(Tree theTree, List<Tree> trees)
         {
-            int counter = 1;
-            int lastHeight = trees[0].Height;
+            int counter = 0;
 
-            for (int i = 1; i < trees.Count; i++)
+            for (int i = 0; i < trees.Count; i++)
             {
-                if (lastHeight >= theTree.Height || trees[i].Height < lastHeight)
+                counter++;
+                if (trees[i].Height >= theTree.Height)
                 {
                     break;
                 }
-                else
-                {
-                    counter++;
-                }
-                lastHeight = trees[i].Height;
-            }
-
-
-            foreach (var tree in trees)
-            {
-                counter++;
-
             }
 
             return counter;
